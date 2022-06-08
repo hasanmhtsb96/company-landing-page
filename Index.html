@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */
+
+    * {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+
+    .top-rated {
+      background-color: #f2f2f2;
+    }
+
+    .carousel-inner img {
+      width: 100%;
+      /* Set width to 100% */
+      margin: auto;
+      min-height: 200px;
+    }
+
+    .buy-it-btn {
+      border-radius: 0px;
+      background-color: orange;
+      color: black;
+      border: 0px;
+    }
+
+    .card {
+      border: none;
+    }
+
+    .card img {
+      border-radius: 0px;
+    }
+
+    .banner {
+      position: relative
+    }
+
+    .banner img {
+      width: 100%
+    }
+
+    .banner .container {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 50%;
+      text-align: left;
+      transform: translateY(-50%)
+    }
+
+    .top-rated-wrap {
+      overflow: hidden
+    }
+
+    /* header.masthead {
+      padding-top: 10.5rem;
+      padding-bottom: 6rem;
+      text-align: center;
+      color: #fff;
+      background-image: url(pexels-dsd-1822608.jpg);
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+      background-position: center center;
+      background-size: cover;
+    } */
+
+    .items-to-buy,
+    .testimonial {
+      background-color: orange;
+    }
+
+    .subscribe-form {
+      max-width: 500px;
+
+    }
+
+    /* Hide the carousel text when the screen is less than 600 pixels wide */
+    @media (max-width: 600px) {
+      .carousel-caption {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">BestCologne</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact Us</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <button class="btn btn-light" type="submit">Login</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+
+  <header class="masthead py-3">
+    <div class="container">
+
+      <div id="carouselExampleCaptions" class="carousel slide h-60" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" style="max-height: 800px">
+            <img src="pexels-mareefe-932577.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h3>Authentic</h3>
+            </div>
+          </div>
+          <div class="carousel-item" style="max-height: 800px">
+            <img src="pexels-uva-rova-339835.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h3>Reliable</h3>
+            </div>
+          </div>
+          <div class="carousel-item" style="max-height: 800px">
+            <img src="pexels-erik-mclean-7359153.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h3>Lasts Forever</h3>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="section items-to-buy bg-orange">
+    <div class="container">
+      <div class="row my-3">
+        <div class="col">
+          <h2 class="py-5 text-center">We are selling the finest perfumes and colognes</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container p-2">
+    <div class="row p-2">
+      <div class="col">
+        <div class="card">
+          <img class="card-img-top" src="colognes/pexels-aleksandr-slobodianyk-989962.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Lacoste Essential</h5>
+            <p class="card-text">A Woody Aromatic fragrance for men. Essential was launched in 2005. Top notes are
+              cassia, bergamot, tangerine and tomato
+              leaf; middle notes ...</p>
+            <p><b>89.00£</b></p>
+            <a href="#" class="btn btn-primary buy-it-btn">Buy It</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img class="card-img-top" src="colognes/pexels-karolina-grabowska-4938270.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Opus 1870</h5>
+            <p class="card-text">A masterpiece, of course. Classic, without ever being de rigueur. A delicate waft of
+              incense meets invigorating yuzu – a
+              bracing, brilliant fragrance ...
+            </p>
+            <p><b>65.00£</b></p>
+            <a href="#" class="btn btn-primary buy-it-btn">Buy It</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img class="card-img-top" src="colognes/pexels-valeria-boltneva-1961786.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">D&G 3L'imperatrice</h5>
+            <p class="card-text">This perfume is a fruity, floral, feminine fragrance. The irresistible fragrance opens
+              with
+              succulent notes of kiwi, red currant, and ...
+            </p>
+            <p><b>45.00£</b></p>
+            <a href="#" class="btn btn-primary buy-it-btn">Buy It</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row p-2">
+      <div class="col">
+        <div class="card">
+          <img class="card-img-top" src="colognes/pexels-karolina-grabowska-4735906.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Miss Dior</h5>
+            <p class="card-text">The new Miss Dior eau de parfum brings in a wave of optimism and brims with
+              life—echoing Miss Dior's very essence. Miss
+              Dior's fresh and ...
+            </p>
+            <p><b>69.00£</b></p>
+            <a href="#" class="btn btn-primary buy-it-btn">Buy It</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img class="card-img-top" src="colognes/pexels-pixabay-264870.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Coco Chanel</h5>
+            <p class="card-text">COCO MADEMOISELLE. The essence of a bold and free woman. A feminine ambery fragrance
+              with a strong personality and a
+              surprising freshness...
+            </p>
+            <p><b>65.00£</b></p>
+            <a href="#" class="btn btn-primary buy-it-btn">Buy It</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img class="card-img-top" src="colognes/pexels-pixabay-264950.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Raco Rabanne</h5>
+            <p class="card-text">Paco Rabanne has made an imprint by influenced perfume trends of yesterday, today and
+              tomorrow. Paco Rabanne perfumes
+              and aftershave ...
+            </p>
+            <p><b>59.00£</b></p>
+            <a href="#" class="btn btn-primary buy-it-btn">Buy It</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container p-3">
+      <section class="top-rated-wrap">
+
+        <div class="row">
+          <div class="col top-rated">
+            <div class="h-100 d-flex align-items-center flex-column justify-content-center">
+
+              <h3>Top Rated</h3>
+              <p>Our top rated perfumes for your loved ones.</p>
+              <button class="btn btn-submit buy-it-btn">Buy It</button>
+            </div>
+          </div>
+          <div class="col top-rated">
+            <img src="pexels-valeria-boltneva-965989.jpg" alt="" class="w-100">
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <div class="container my-5">
+    <div class="row">
+      <div class="col">
+        <div class="banner"> <img src="pexels-george-becker-136651.jpg">
+          <div class="container">
+            <div class="row">
+              <div class="col">
+
+              </div>
+              <div class="col">
+                <h3 class="text-white">A new perfume is on the way.</h3>
+                <p class="text-white">We are expanding to global reach and more and more brands are joining us. Tominy
+                  is one
+                  of the
+                  partners
+                  who are joining our efforts to provide you with the finest perfumes and colognes from around the
+                  world.
+                </p>
+                <button class="btn btn-submit buy-it-btn">Learn More</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section testimonial">
+    <div class="container py-5">
+      <div class="row">
+        <div class="col text-center">
+          <h3 class="pb-3">Interesting in recieving offers? Subscribe to our mailing list! We won't spam you.</h3>
+          <form action="#" method="post">
+            <div class="input-group mb-3 m-auto  subscribe-form">
+              <input type="email" class="form-control" placeholder="Enter your Email">
+              <div class="input-group-prepend">
+                <button class="btn btn-dark" type="button">Submit</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <footer class="page-footer font-small blue pt-4 bg-dark text-white">
+    <div class="container-fluid text-left">
+      <div class="row">
+        <div class="col-md-6 mt-md-0 mt-3 text-center text-md-left">
+          <h5 class="text-uppercase">BestCologne</h5>
+          <p>Since 1992, our aim is to provide you with the finest perfumes and colognes from brands all around the
+            world.</p>
+        </div>
+        <hr class="clearfix w-100 d-md-none pb-3">
+        <div class="col-md-3 mb-md-0 mb-3 text-center">
+          <h5 class="text-uppercase">Links</h5>
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!" class="text-white">Home</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">About Us</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Products</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-3 mb-md-0 mb-3 text-center">
+          <h5 class="text-uppercase">Links</h5>
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!" class="text-white">Terms</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Privacy</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+      <a href="/" class="text-white">BestCologne</a>
+    </div>
+
+  </footer>
+  <!-- Footer -->
+
+</body>
+
+<script>
+  $('.carousel').carousel()
+</script>
+
+</html>
